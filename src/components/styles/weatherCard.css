@@ -106,9 +106,5 @@ width: 500px;
     }
 }
 
-@media only screen and (max-width: 767px) {
-  .weather {
-    height: 100vh;
-  }
-  }
+
   
