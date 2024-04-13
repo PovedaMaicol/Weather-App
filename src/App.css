@@ -15,8 +15,10 @@ font-family: 'Nunito', sans-serif;
 
 
 body {
-  background-color: black;
-  color: rgb(3, 3, 52);
+
+
+ 
+  color: white;
 }
 
 img {
@@ -39,8 +41,10 @@ ul {
 }
 
 .app {
-  background-image: url('https://cdn.dribbble.com/users/580699/screenshots/2934892/summer.gif');
   background-size: cover;
+  background-image: url(./vivid-blurred-colorful-wallpaper-background.jpg);
+  background-repeat: no-repeat;
+  opacity: 0.8;
   background-position: center;
   min-height: 100vh;
   display: flex;

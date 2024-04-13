@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import axios from 'axios';
 import WeatherCard from './components/WeatherCard';
+
 const APIkey = '2334bfb071c9ea1cf54cb6aad47f423f';
 
 function App() {
@@ -84,6 +85,7 @@ axios.get(url)
   console.log(finder);
 
   return (
+
   <div className='app'>
     {
       isLoading ?
@@ -114,6 +116,12 @@ axios.get(url)
     
 
   </div>
+
+
+
+
+
+  
   )
 }
 
