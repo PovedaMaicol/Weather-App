@@ -24,12 +24,19 @@ const [hasError, setHasError] = useState(false);
   }
 
   setCoords(obj);
- }
+ };
 
- useEffect(() => {
-  navigator.geolocation.
-  getCurrentPosition(succes);
-}, []);
+  useEffect(() => {
+    const watchId = navigator.geolocation.watchPosition(succes, (error) => {
+      console.log(error);
+      setHasError(true);
+      setIsLoading(false);
+    });
+    return () => {
+      navigator.geolocation.clearWatch(watchId);
+    }
+  }, []);
+
 
  useEffect(() => {
 if (coords) {
@@ -53,7 +60,7 @@ setWeather(res.data)
   
 .finally(() =>{
   setIsLoading(false);
-})
+});
 
 }
 }, [coords]);
@@ -105,6 +112,7 @@ axios.get(url)
       />
       :
       <WeatherCard 
+    
       weather={weather}
       temp={temp}
       setTextInput={setTextInput}
