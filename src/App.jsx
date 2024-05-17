@@ -11,8 +11,8 @@ function App() {
 const [coords, setCoords] = useState();
 const [weather, setWeather] = useState();
 const [temp, setTemp] = useState();
-const [isLoading, setIsLoading] = useState(true);
-const [textInput, setTextInput] = useState('');
+// const [isLoading, setIsLoading] = useState(false);
+const [textInput, setTextInput] = useState('bogota');
 const [finder, setFinder] = useState();
 const [hasError, setHasError] = useState(false);
   
@@ -88,12 +88,12 @@ axios.get(url)
 
   <div className='app'>
     {
-      isLoading ?
-     <div className='container_loading'>
-      <img className='imLoading'
-      src='https://img.pikbest.com/png-images/20190918/cartoon-snail-loading-loading-gif-animation_2734139.png!bw700'></img>
-</div>
-      :
+//       isLoading ?
+//      <div className='container_loading'>
+//       <img className='imLoading'
+//       src='https://img.pikbest.com/png-images/20190918/cartoon-snail-loading-loading-gif-animation_2734139.png!bw700'></img>
+// </div>
+      // :
       textInput ? 
 
       <WeatherCard 
